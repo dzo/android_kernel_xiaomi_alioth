@@ -351,6 +351,8 @@
 	mi,mdss-dsi-panel-hbm-off-51-index = <1>;
 	mi,esd-err-irq-gpio = <&tlmm 51 0x2001>;
 	mi,mdss-panel-on-dimming-delay = <120>;
+	mi,mdss-dsi-pan-enable-smart-fps;
+	mi,mdss-dsi-smart-fps-max_framerate = <120>;
 	mi,mdss-dsi-panel-hbm-brightness = <1>;
 	mi,mdss-dsi-panel-dc-threshold = <440>;
 	mi,mdss-dsi-panel-max-brightness-clone = <8191>;
@@ -447,22 +449,30 @@
 
 			mi,mdss-dsi-doze-hbm-command = [
 				05 01 00 00 00 00 02 28 00
-				39 00 00 00 00 00 03 F0 5A 5A
+				39 00 00 00 00 00 03 f0 5a 5a
 				39 00 00 00 00 00 02 60 00
-				39 00 00 00 00 00 02 B0 0B
-				39 00 00 00 00 00 03 D8 50 00
+				39 00 00 00 00 00 03 fc 5a 5a
+				39 00 00 00 00 00 02 b0 16
+				39 00 00 00 00 00 02 d1 2e
+				39 00 00 00 00 00 03 fc a5 a5
+				39 00 00 00 00 00 02 b0 0b
+				39 00 00 00 00 00 03 d8 50 00
 				39 00 00 00 00 00 02 53 22
-				39 01 00 00 22 00 03 F0 A5 A5
+				39 01 00 00 22 00 03 f0 a5 a5
 				05 01 00 00 00 00 02 29 00
 			];
 			mi,mdss-dsi-doze-lbm-command = [
 				05 01 00 00 00 00 02 28 00
-				39 00 00 00 00 00 03 F0 5A 5A
+				39 00 00 00 00 00 03 f0 5a 5a
 				39 00 00 00 00 00 02 60 00
-				39 00 00 00 00 00 02 B0 0B
-				39 00 00 00 00 00 03 D8 50 00
+				39 00 00 00 00 00 03 fc 5a 5a
+				39 00 00 00 00 00 02 b0 16
+				39 00 00 00 00 00 02 d1 2e
+				39 00 00 00 00 00 03 fc a5 a5
+				39 00 00 00 00 00 02 b0 0b
+				39 00 00 00 00 00 03 d8 50 00
 				39 00 00 00 00 00 02 53 23
-				39 01 00 00 22 00 03 F0 A5 A5
+				39 01 00 00 22 00 03 f0 a5 a5
 				05 01 00 00 00 00 02 29 00
 			];
 			mi,mdss-dsi-doze-hbm-command-state = "dsi_lp_mode";
